@@ -15,7 +15,11 @@ It talks to the Chroma REST API that Synapse hosts at `http://localhost:54235/ra
 1. Copy `RazerChromaMute.js` into your SignalRGB plugins folder (`Documents\WhirlwindFX\Plugins`).
 2. Restart SignalRGB.
 3. In Synapse, make sure Chroma Apps is turned on (Chroma > Chroma Apps).
-4. In SignalRGB, turn off "Automatically Close Conflicting Programs" (Settings > Windows Settings) so Synapse can keep running.
+4. Stop SignalRGB from closing Synapse. SignalRGB closes Razer's processes by default, and the plugin needs Synapse running. In SignalRGB's conflicting programs settings, turn on **Prevent Closing** for each of these:
+   - `RazerAppEngine.exe`
+   - `RzSynapse.exe`
+   - `Razer Synapse 3.exe`
+   - `Razer Synapse Service.exe`
 
 ## Status
-Early version, not yet tested on real hardware. Reports welcome.
+Early version. Confirmed working on the author's setup. Reports welcome.
